@@ -1,5 +1,5 @@
 # CRUD operations
-
+1st hunk change to stage/commit
 ### Create/Update
 Create and update are the same operation in Solr (and SolrNet). It's mapped to the `Add()` method in the `ISolrOperations<T>` interface.
 
@@ -17,7 +17,7 @@ is not the same as this:
 var documents = Enumerable.Range(0, 100).Select(i => new MyDocument(i));
 solr.Add(documents);
 ```
-
+2nd change to NOT stage
 If you `Add()` a document that already exists in the Solr index, it's replaced (using the unique key as equality)
 
 There's also `AddWithBoost()` (also with single-document and `IEnumerable` overloads) that you can use to apply an index-time boosting to the added documents.
